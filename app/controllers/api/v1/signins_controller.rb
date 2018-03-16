@@ -7,7 +7,6 @@ class Api::V1::SigninsController < ApplicationController
 
 
   def create
-    byebug
     @signin = Signin.new(signin_params)
 
     if @signin.save
