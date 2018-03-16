@@ -29,6 +29,6 @@ class Api::V1::SigninsController < ApplicationController
 
   private
   def signin_params
-    params.require(:signin).permit(:timestamp, :user_id)
+    params.require(:signin).permit(:time, :date, :user_id)
   end
 end

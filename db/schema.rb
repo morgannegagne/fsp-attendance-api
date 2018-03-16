@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 20180316011300) do
   enable_extension "plpgsql"
 
   create_table "signins", force: :cascade do |t|
-    t.datetime "timestamp"
+    t.date "date"
+    t.time "time"
     t.integer "user_id"
   end
 
