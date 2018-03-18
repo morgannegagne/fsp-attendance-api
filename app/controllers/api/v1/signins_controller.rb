@@ -1,7 +1,11 @@
 class Api::V1::SigninsController < ApplicationController
 
   def index
-    @signins = Signin.all
+    if params[:user_id] && params[:date]
+      @signins = Signin.find_by(user_id: params[:user_id], date: params[:date]) || "absent"
+    else
+      @signins = Signin.all
+    end
     render json: @signins
   end
 
