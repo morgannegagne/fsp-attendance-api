@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20180316011300) do
 
   create_table "signins", force: :cascade do |t|
     t.date "date"
-    t.time "time"
+    t.time "string"
     t.integer "user_id"
   end
 
